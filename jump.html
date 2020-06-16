@@ -35,10 +35,12 @@
 
     (function(){
         var url=getUrlParameter('url');
-        website=website+'/open_url?url='+encodeURIComponent(url);
-        if(isWeixin)
+        
+        if(isWeixin())
         {
             website=website+'/open_winxin_url?url='+encodeURIComponent(url);
+        }else{
+            website=website+'/open_url?url='+encodeURIComponent(url);
         }
         setTimeout(function(){ 
 
@@ -49,6 +51,3 @@
     })();
 </script>>
 </body>
-
-
-</html>
