@@ -24,7 +24,8 @@
     var getUrlParameter=function(name) {
         name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
         var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-
+        alert(''+window.location.search);
+         alert(''+decodeURIComponent(window.location.search));
         var results = regex.exec(decodeURIComponent(window.location.search));
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     };
