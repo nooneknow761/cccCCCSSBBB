@@ -16,7 +16,7 @@
 
 <body>
 <h1>
-    跳转老司机app中，请稍后...
+    正在优化线路，请稍等....
 
 </h1>
 
@@ -36,13 +36,13 @@
     var website="https://www.lsj001.me";
 
     (function(){
-        var url=getUrlParameter('url');
+        //var url=getUrlParameter('url');
         
         if(isWeixin())
         {
-            website=website+'/open_wechat_url?url='+encodeURIComponent(url);
+            website=website+'/wechat';
         }else{
-            website=website+'/open_url?url='+encodeURIComponent(url);
+            website=website;
         }
         setTimeout(function(){ 
 
